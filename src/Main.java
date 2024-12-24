@@ -11,52 +11,28 @@ public class Main {
         employees[3] = new Employee("Веселов Виктор Андреевич", 4, 35600);
         employees[4] = new Employee("Грудинкин Александр Александрович", 5, 34000);
 
+        System.out.println();
 
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] == null) {
-                break;
-            }
-            System.out.println(employees[i].toString());
-        }
+        DataEmployee.printAll(employees);
 
         System.out.println();
 
-        int maxSalary = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] == null) {
-                break;
-            }
-            if (employees[i].getSalary() > maxSalary) {
-                maxSalary = employees[i].getSalary();
-            }
-        }
-        System.out.println("Максимальная зарплата: " + maxSalary);
+        DataEmployee.maxSalary(employees);
 
         System.out.println();
 
-        int minSalary = 100000;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] == null) {
-                break;
-            }
-            if (employees[i].getSalary() < minSalary) {
-                minSalary = employees[i].getSalary();
-            }
-        }
-        System.out.println("Минимальная зарплата: " + minSalary);
+        DataEmployee.minSalary(employees);
 
         System.out.println();
 
-        System.out.println("Средняя зарплата: " + (maxSalary + minSalary) / 2);
+        DataEmployee.midSalary(employees);
 
         System.out.println();
 
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] == null) {
-                break;
-            }
-            System.out.println(employees[i].getName());
-        }
+        DataEmployee.printName(employees);
 
+        System.out.println();
+
+        DataEmployee.sumSalary(employees);
     }
 }

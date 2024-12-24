@@ -6,14 +6,12 @@ public class Employee {
     private int salary;
     private int id;
     private static int nextId = (int) (Math.random() * 10);
-    private Employee[] employees;
 
     public Employee(String name, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
         this.id = (int) (nextId * Math.random() * 100);
-        this.employees = new Employee[10];
     }
 
     public String getName() {
@@ -56,15 +54,5 @@ public class Employee {
     @Override
     public int hashCode() {
         return Objects.hash(name, salary);
-    }
-
-    public void printAll() {
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] == null) {
-                break;
-            }
-            Employee employee = employees[i];
-            System.out.println(employee.toString());
-        }
     }
 }
