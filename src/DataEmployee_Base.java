@@ -1,4 +1,4 @@
-public class DataEmployee {
+public class DataEmployee_Base {
 
     public static void printAll(Employee[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -10,7 +10,7 @@ public class DataEmployee {
     }
 
     public static void maxSalary(Employee[] array) {
-        int maxSalary = 0;
+        double maxSalary = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
                 break;
@@ -23,7 +23,7 @@ public class DataEmployee {
     }
 
     public static void minSalary(Employee[] array) {
-        int minSalary = 100000;
+        double minSalary = 100000;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
                 break;
@@ -36,8 +36,8 @@ public class DataEmployee {
     }
 
     public static void midSalary(Employee[] array) {
-        int minSalary = 100000;
-        int maxSalary = 0;
+        double minSalary = 100000;
+        double maxSalary = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
                 break;
@@ -62,7 +62,7 @@ public class DataEmployee {
     }
 
     public static void sumSalary(Employee[] array) {
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
                 break;
@@ -71,6 +71,5 @@ public class DataEmployee {
         }
         System.out.println("Затраты на ЗП в месяц: " + sum + " руб.");
     }
-
 }
 

@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Employee {
     private String name;
     private int department;
-    private int salary;
+    private double salary;
     private int id;
     private static int nextId = (int) (Math.random() * 10);
 
@@ -22,7 +22,7 @@ public class Employee {
         return department;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -34,13 +34,13 @@ public class Employee {
         this.department = department;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Ф.И.О - " + name + "; Отдел - " + department + "; Зарплата - " + salary + " руб.";
+        return "Ф.И.О - " + getName() + "; Отдел - " + getDepartment() + "; Зарплата - " + getSalary() + " руб.";
     }
 
     @Override
