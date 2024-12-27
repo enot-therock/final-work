@@ -5,13 +5,13 @@ public class Employee {
     private int department;
     private double salary;
     private int id;
-    private static int nextId = (int) (Math.random() * 10);
+    private static int nextId = 10;
 
-    public Employee(String name, int department, int salary) {
+    public Employee(String name, int department, double salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
-        this.id = (int) (nextId * Math.random() * 100);
+        this.id = nextId++;
     }
 
     public String getName() {

@@ -58,5 +58,7 @@ public class Main {
         System.out.println();
 
         DataEmployee_Middle.maxNumberParameter(employees, 39500); // Повышенная сложность (3.b)
+        System.out.println();
     }
+
 }
