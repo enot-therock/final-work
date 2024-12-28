@@ -24,7 +24,7 @@ public class EmployeeBook {
     public void printAll() {
         for (int i = 0; i < size; i++) {
             Employee employee = employees[i];
-            System.out.println("Ф.И.О. - " + employee.getName() + "; Отдел - " + employee.getDepartment() + "; Зарплата - " + employee.getSalary() + " руб.");
+            System.out.println(employee);
         }
     }
 
@@ -49,15 +49,13 @@ public class EmployeeBook {
     public void departmentMinSalary(int department) {
         double minSalary = 100000;
         String name = "";
+        if (department > 5 || department < 1) {
+            throw new IllegalArgumentException("Такого отдела не существует!");
+        }
         for (int i = 0; i < size; i++) {
-            if (employees[i].getDepartment() == department) {
-                if (employees[i].getSalary() < minSalary) {
+            if (employees[i].getDepartment() == department && employees[i].getSalary() < minSalary) {
                     minSalary = employees[i].getSalary();
                     name = employees[i].getName();
-                }
-            }
-            if (department > 5 || department < 1) {
-                throw new IllegalArgumentException("Такого отдела не существует!");
             }
         }
         System.out.println("Сотрудник с минимальной ЗП в отделе № " + department + " - " + name + ", получает - " + minSalary + "руб.");
@@ -66,15 +64,13 @@ public class EmployeeBook {
     public void departmentMaxSalary(int department) {
         double maxSalary = 0;
         String name = "";
+        if (department > 5 || department < 1) {
+            throw new IllegalArgumentException("Такого отдела не существует!");
+        }
         for (int i = 0; i < size; i++) {
-            if (employees[i].getDepartment() == department) {
-                if (employees[i].getSalary() > maxSalary) {
+            if (employees[i].getDepartment() == department && employees[i].getSalary() > maxSalary) {
                     maxSalary = employees[i].getSalary();
                     name = employees[i].getName();
-                }
-            }
-            if (department > 5 || department < 1) {
-                throw new IllegalArgumentException("Такого отдела не существует!");
             }
         }
         System.out.println("Сотрудник с максимальной ЗП в отделе № " + department + " - " + name + ", получает - " + maxSalary + "руб.");
@@ -82,12 +78,12 @@ public class EmployeeBook {
 
     public void departmentSumSalary(int department) {
         double sumSalary = 0;
+        if (department > 5 || department < 1) {
+            throw new IllegalArgumentException("Такого отдела не существует!");
+        }
         for (int i = 0; i < size; i++) {
             if (employees[i].getDepartment() == department) {
                 sumSalary += employees[i].getSalary();
-            }
-            if (department > 5 || department < 1) {
-                throw new IllegalArgumentException("Такого отдела не существует!");
             }
         }
         System.out.println("Суммарные затраты на ЗП в отделе № " + department + " - " + sumSalary + "руб.");
@@ -97,39 +93,38 @@ public class EmployeeBook {
         double sumSalary = 0;
         double midSalary = 0;
         int sumPeople = 0;
+        if (department > 5 || department < 1) {
+            throw new IllegalArgumentException("Такого отдела не существует!");
+        }
         for (int i = 0; i < size; i++) {
             if (employees[i].getDepartment() == department) {
-                sumPeople += employees[i].getDepartment() / department;
+                sumPeople += employees[i].getDepartment();
                 sumSalary += employees[i].getSalary();
-                midSalary = sumSalary / sumPeople;
-            }
-            if (department > 5 || department < 1) {
-                throw new IllegalArgumentException("Такого отдела не существует!");
             }
         }
-        System.out.println("Человек в отделе: " + sumPeople);
+        midSalary = sumSalary / (sumPeople / department);
         System.out.println("Средняя ЗП в отделе № " + department + " - " + midSalary + "руб.");
     }
 
     public void departmentIndexSalary(int department, double percent) {
+        if (department > 5 || department < 1) {
+            throw new IllegalArgumentException("Такого отдела не существует!");
+        }
         for (int i = 0; i < size; i++) {
             if (employees[i].getDepartment() == department) {
                 employees[i].setSalary(employees[i].getSalary() + employees[i].getSalary() * (percent / 100));
                 System.out.println("ЗП в отделе № " + department + " у сотрудника: " + employees[i].getName() + " с учетом индексации - " + employees[i].getSalary() + "руб.");
             }
-            if (department > 5 || department < 1) {
-                throw new IllegalArgumentException("Такого отдела не существует!");
-            }
         }
     }
 
     public void departmentName(int department) {
+        if (department > 5 || department < 1) {
+            throw new IllegalArgumentException("Такого отдела не существует!");
+        }
         for (int i = 0; i < size; i++) {
             if (employees[i].getDepartment() == department) {
                 System.out.println("Сотрудник отдела № " + department + " " + employees[i].getName() +  "; ЗП - " + employees[i].getSalary() + " руб.");
-            }
-            if (department > 5 || department < 1) {
-                throw new IllegalArgumentException("Такого отдела не существует!");
             }
         }
     }

@@ -15,49 +15,49 @@ public class Main {
 
         System.out.println();
 
-        DataEmployee_Base.printAll(employees); // Базовая сложность (a)
+        Employee.printAll(employees); // Базовая сложность (a)
         System.out.println();
 
-        DataEmployee_Base.sumSalary(employees); // Базовая сложность (b)
+        Employee.sumSalary(employees); // Базовая сложность (b)
         System.out.println();
 
-        DataEmployee_Base.minSalary(employees); // Базовая сложность (c)
+        Employee.minSalary(employees); // Базовая сложность (c)
         System.out.println();
 
-        DataEmployee_Base.maxSalary(employees); // Базовая сложность (d)
+        Employee.maxSalary(employees); // Базовая сложность (d)
         System.out.println();
 
-        DataEmployee_Base.midSalary(employees); // Базовая сложность (e)
+        Employee.midSalary(employees); // Базовая сложность (e)
         System.out.println();
 
-        DataEmployee_Base.printName(employees); // Базовая сложность (f)
+        Employee.printName(employees); // Базовая сложность (f)
         System.out.println();
 
-        DataEmployee_Middle.indexing(employees, 12); // Повышенная сложность (1)
+        Employee.indexing(employees, 12); // Повышенная сложность (1)
         System.out.println();
 
-        DataEmployee_Middle.departmentMinSalary(employees, 3); // Повышенная сложность (2.a)
+        Employee.departmentMinSalary(employees, 2); // Повышенная сложность (2.a)
         System.out.println();
 
-        DataEmployee_Middle.departmentMaxSalary(employees, 3); // Повышенная сложность (2.b)
+        Employee.departmentMaxSalary(employees, 3); // Повышенная сложность (2.b)
         System.out.println();
 
-        DataEmployee_Middle.departmentSumSalary(employees, 3); // Повышенная сложность (2.c)
+        Employee.departmentSumSalary(employees, 3); // Повышенная сложность (2.c)
         System.out.println();
 
-        DataEmployee_Middle.departmentMidSalary(employees, 3); // Повышенная сложность (2.d)
+        Employee.departmentMidSalary(employees, 3); // Повышенная сложность (2.d)
         System.out.println();
 
-        DataEmployee_Middle.departmentIndexSalary(employees, 3, 15); // Повышенная сложность (2.e)
+        Employee.departmentIndexSalary(employees, 3, 15); // Повышенная сложность (2.e)
         System.out.println();
 
-        DataEmployee_Middle.departmentName(employees, 3); // Повышенная сложность (2.f)
+        Employee.departmentName(employees, 3); // Повышенная сложность (2.f)
         System.out.println();
 
-        DataEmployee_Middle.minNumberParameter(employees, 38000); // Повышенная сложность (3.a)
+        Employee.minNumberParameter(employees, 38000); // Повышенная сложность (3.a)
         System.out.println();
 
-        DataEmployee_Middle.maxNumberParameter(employees, 39500); // Повышенная сложность (3.b)
+        Employee.maxNumberParameter(employees, 39500); // Повышенная сложность (3.b)
         System.out.println();
     }
 

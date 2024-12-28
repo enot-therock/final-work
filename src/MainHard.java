@@ -30,7 +30,7 @@ public class MainHard {
         employeeBook.departmentSumSalary(4);
         System.out.println();
 
-        employeeBook.departmentMidSalary(4);
+        employeeBook.departmentMidSalary(3);
         System.out.println();
 
         employeeBook.departmentIndexSalary(3, 15);
@@ -39,7 +39,9 @@ public class MainHard {
         employeeBook.addEmployee("Литвиненко Виталий Вадимович", 5, 39500);
         System.out.println();
 
-        employeeBook.departmentName(5);
+        employeeBook.departmentName(2);
+        System.out.println();
+
         employeeBook.printId();
         System.out.println();
 
